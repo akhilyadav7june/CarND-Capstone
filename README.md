@@ -6,8 +6,8 @@ This is the project repo for the final project of the Udacity Self-Driving Car N
 [image1]: ./imgs/sim.jpg "Simulator"
 [image2]: ./imgs/real.jpg "Real"
 
-#### Member
-Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
+#### Name (udacity account email)
+#### Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
 
 * This project divide into three parts
     
