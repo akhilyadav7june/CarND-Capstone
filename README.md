@@ -3,6 +3,9 @@
 
 This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car.
 
+[image1]: ./imgs/sim.jpg "Simulator"
+[image2]: ./imgs/real.jpg "Real"
+
 #### Member
 Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
 
@@ -25,10 +28,9 @@ Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
               6. num_steps (number for iteration)
             * After training we have to export the trained model into frozen inference graph so that we can use this into our code for detection and classification of traffic lighht color.
         * Below is the working result images of both simulator and real:
-            * Simulator 
-                [image1]: ./imgs/sim.jpg "Simulator"   
-            * Real
-                [image2]: ./imgs/real.jpg "Real"     
+            ![image1]
+            
+            ![image2]
     * The planning subsystem (node waypoint updater) updates the waypoints and the associated target velocities.
        
         * Find the nearest n waypoints ahead of the vehicle where n is defined as a set number of waypoints.
