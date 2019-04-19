@@ -26,9 +26,9 @@ Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
             * After training we have to export the trained model into frozen inference graph so that we can use this into our code for detection and classification of traffic lighht color.
         * Below is the working result images of both simulator and real:
             * Simulator 
-                    [image1]: ./imgs/sim.jpg "Simulator"   
+                [image1]: ./imgs/sim.jpg "Simulator"   
             * Real
-                    [image2]: ./imgs/real.jpg "Real"     
+                [image2]: ./imgs/real.jpg "Real"     
     * The planning subsystem (node waypoint updater) updates the waypoints and the associated target velocities.
        
         * Find the nearest n waypoints ahead of the vehicle where n is defined as a set number of waypoints.
