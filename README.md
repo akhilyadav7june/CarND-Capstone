@@ -9,6 +9,7 @@ Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
 * This project divide into three parts
     
     * The perception subsystem detects traffic lights and obstacles. Here i used tensorflow object detection API to detect and classify traffic light color. Following steps performed for this subsystem:
+
         * Gathering of the image data
         * Label and annotate the images
             * I tried the data but one of the great person [Anthony Sarkis](https://medium.com/@anthony_sarkis) who made his annotated data-set openly available. I downloaded and used that data to train my models.
@@ -16,14 +17,20 @@ Akhilesh Kr. Yadav (akhilyadav7june@gmail.com)
             * We first need to convert our data into the TFRecord format. This basically takes images and the yaml file of annotations and combines them into one that can be used as input for the training.    
             * We need to also download [tensorflow object detection apis](https://github.com/tensorflow/models/tree/289a2f99a7df528f6193a5ab3ee284ff3112b731), trained [inference model](https://github.com/tensorflow/models/blob/289a2f99a7df528f6193a5ab3ee284ff3112b731/object_detection/g3doc/detection_model_zoo.md). Installation process and all its dependencies required to run use object detection apis are [here](https://github.com/tensorflow/models/blob/289a2f99a7df528f6193a5ab3ee284ff3112b731/object_detection/g3doc/installation.md).
             * We need to choose the model and parameters in the config file. I choose ssd model instead of faster_rcnn because ssd is faster. I knew that accuracy is better with faster_rcnn. But i choosed ssd due to performance. Below parameter i setted in config
-              num_classes: 4  (because we have 4 classes for traffic lights, red, green, yellow and none) 
-              fine_tune_checkpoint (set the location of the pre-trained model check point file)
-              input_path (set the location of TFRecord file which you created in 1st step)
-              label_map_path (this file contains all the four classes with there id)
-              num_examples (number if image files for training)
-              num_steps (number for iteration)
+              1. num_classes: 4  (because we have 4 classes for traffic lights, red, green, yellow and none) 
+              2. fine_tune_checkpoint (set the location of the pre-trained model check point file)
+              3. input_path (set the location of TFRecord file which you created in 1st step)
+              4. label_map_path (this file contains all the four classes with there id)
+              5. num_examples (number if image files for training)
+              6. num_steps (number for iteration)
             * After training we have to export the trained model into frozen inference graph so that we can use this into our code for detection and classification of traffic lighht color.
+        * Below is the working result images of both simulator and real:
+            * Simulator 
+                    [image1]: ./imgs/sim.jpg "Simulator"   
+            * Real
+                    [image2]: ./imgs/real.jpg "Real"     
     * The planning subsystem (node waypoint updater) updates the waypoints and the associated target velocities.
+       
         * Find the nearest n waypoints ahead of the vehicle where n is defined as a set number of waypoints.
         * Determine if a red traffic light falls in the range of waypoints ahead of the traffic light.
         * Calculate target velocities for each waypoint.
